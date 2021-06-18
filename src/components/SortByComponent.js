@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SortByComponent = () => {
+const SortByComponent = ({fetchData}) => {
   return (
     <div className='sort-by-component'>
       <input className='sort-by-component__input'

@@ -9,7 +9,7 @@ import ContactsListComponent from './ContactsListComponent';
 export const ConfigContext = React.createContext();
 
 const configValue = {
-  apiBaseUrl: 'https://localhost:44364/contacts'
+  apiBaseUrl: 'https://localhost:44364'
 };
 
 const AppComponent = (props) => {
@@ -18,17 +18,19 @@ const AppComponent = (props) => {
 
   // initialise state. This code will only run when the component mounts
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        `${configValue.apiBaseUrl}`,
-      );
-
-      setCurrentListingData(result.data);
-      setIsWaitingForResults(false);
-    };
-
-    fetchData();
+    fetchData("/contacts");
   }, []);
+
+  const fetchData = async (urlPathAndQuery) => {
+    setIsWaitingForResults(true);
+
+    const result = await axios(
+      `${configValue.apiBaseUrl}${urlPathAndQuery}`,
+    );
+
+    setCurrentListingData(result.data);
+    setIsWaitingForResults(false);
+  };
 
   if(isWaitingForResults){
     return (
@@ -42,8 +44,8 @@ const AppComponent = (props) => {
         <TitleComponent titleText={currentListingData.screenTitleText} />
         <SearchComponent data={currentListingData.searchComponent}/>
         <div className="sorting-container">
-          <SortByComponent />
-          <SortOrderComponent />
+          <SortByComponent fetchData={fetchData}/>
+          <SortOrderComponent sortOrderData={currentListingData.sortOrderComponent} fetchData={fetchData}/>
         </div>
         <ContactsListComponent />
       </ConfigContext.Provider>
