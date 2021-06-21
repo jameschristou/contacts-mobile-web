@@ -44,7 +44,7 @@ const AppComponent = (props) => {
         <TitleComponent titleText={currentListingData.screenTitleText} />
         <SearchComponent data={currentListingData.searchComponent}/>
         <div className="sorting-container">
-          <SortByComponent fetchData={fetchData}/>
+          <SortByComponent sortByData={currentListingData.sortByComponent} fetchData={fetchData}/>
           <SortOrderComponent sortOrderData={currentListingData.sortOrderComponent} fetchData={fetchData}/>
         </div>
         <ContactsListComponent />

@@ -21,5 +21,11 @@ body{
 
 .sort-order-component,
 .sort-by-component{
-    display: inline-block;
+    display: block;
+}
+
+.sort-order-component{
+    &__options{
+        display:block;
+    }
 }
