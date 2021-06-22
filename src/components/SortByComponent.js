@@ -6,7 +6,6 @@ const SortByComponent = ({sortByData, fetchData}) => {
 
   const onClickHandler = (val) => {
     setIsExpanded(!isExpanded);
-    fetchData(sortOrderData.selectActionUrl);
   };
 
   return (
@@ -14,9 +13,11 @@ const SortByComponent = ({sortByData, fetchData}) => {
       <input className='sort-by-component__input'
           type="submit"
           value={"Sort"}
-          onClick={e => console.log(e.target.value)}
+          onClick={onClickHandler}
         />
-      <SortByOptionsComponent sortByOptions={sortByData.sortByOptions} fetchData={fetchData}/>
+      <div className={`sort-by-component-options${isExpanded ? "" : " hidden"}`}>
+        <SortByOptionsComponent sortByOptions={sortByData.sortByOptions} fetchData={fetchData}/>
+      </div>
     </div>
   );
 };

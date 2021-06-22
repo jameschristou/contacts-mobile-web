@@ -1,3 +1,5 @@
+$item-text-background-color: lightblue;
+
 html,
 body,
 .kg_container,
@@ -10,7 +12,7 @@ body,
 }
 
 body{
-    font-family: "Open Sans";
+    font-family: "Verdana";
     color: darkslategrey;
 }
 
@@ -24,8 +26,75 @@ body{
     display: block;
 }
 
+.sort-by-component-options{
+    &-list{
+        list-style-type:none;
+        margin:10px;
+        padding:0;
+        width:150px;
+    
+        &-item{
+            cursor: pointer;
+    
+            @media (hover: hover){
+                &:hover{
+                    background-color: darken($item-text-background-color, 8%)
+                }
+            }
+        }
+    }
+}
+
 .sort-order-component{
     &__options{
         display:block;
     }
+}
+
+.contact-list{
+    list-style-type:none;
+    margin:10px;
+    padding:0;
+
+    &-item{
+        cursor: pointer;
+
+        @media (hover: hover){
+            &:hover{
+                background-color: darken($item-text-background-color, 8%)
+            }
+        }
+
+        &-avatar-container{
+            width:50px;
+            display:inline-block;
+        }
+    
+        &-info{
+            display:inline-block;
+        }
+    
+        &-avatar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+    
+            &__text{
+                padding:5px;
+            }
+        }
+
+        &__name{
+            font-weight: bold;
+        }
+
+        &__primary-contact-name{
+            font-size: 13px;
+        }
+    }
+}
+
+.hidden{
+    display:none;
 }

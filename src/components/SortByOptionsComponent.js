@@ -1,17 +1,16 @@
 import React, {useState} from 'react';
+import SortByOptionComponent from './SortByOptionComponent';
 
 const SortByOptionsComponent = ({sortByOptions, fetchData}) => {
   const onClickHandler = (val) => {
   };
 
   return (
-    <div className='sort-by-component__options'>
-      <ul>
+      <ul className='sort-by-component-options-list'>
         {sortByOptions.map((value, index) => {
-            return <li key={index}>{value.displayText}</li>
-          })}
+            return <SortByOptionComponent sortByOptionData={value} key={index} fetchData={fetchData}/>
+        })}
       </ul>
-    </div>
   );
 };
 
