@@ -21,9 +21,24 @@ body{
     font-weight:bold;
 }
 
+.sorting-container{
+    margin-top:10px;
+}
+
 .sort-order-component,
 .sort-by-component{
-    display: block;
+    display: inline-block;
+
+    &__input{
+        background-color: white;
+        border-width: 1px;
+        border-color: lightgrey;
+        padding: 10px;
+        width: 100px;
+        border-radius: 20px;
+        color: #007cc2;
+        border-style: solid;
+    }
 }
 
 .sort-by-component-options{
@@ -35,17 +50,15 @@ body{
     
         &-item{
             cursor: pointer;
-    
-            @media (hover: hover){
-                &:hover{
-                    background-color: darken($item-text-background-color, 8%)
-                }
-            }
+            padding: 5px;
+            border-bottom: solid 1px;
         }
     }
 }
 
 .sort-order-component{
+    margin-left:10px;
+
     &__options{
         display:block;
     }
@@ -58,6 +71,7 @@ body{
 
     &-item{
         cursor: pointer;
+        margin: 5px 0;
 
         @media (hover: hover){
             &:hover{
@@ -68,10 +82,12 @@ body{
         &-avatar-container{
             width:50px;
             display:inline-block;
+            padding: 8px 0;
         }
     
         &-info{
             display:inline-block;
+            margin-left: 10px;
         }
     
         &-avatar{

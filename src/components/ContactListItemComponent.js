@@ -1,15 +1,16 @@
 import React from 'react';
 
 const ContactListItemComponent = ({contactData}) => {
-  var avatarTextStyle = {
-    backgroundColor: contactData.avatar.colour
+  var avatarColourStyle = {
+    backgroundColor: "#" + contactData.avatar.backgroundColour,
+    color: "#" + contactData.avatar.textColour
   };
 
   return (
     <li className='contact-list-item'>
-      <div className='contact-list-item-avatar-container'>
+      <div className='contact-list-item-avatar-container' style={avatarColourStyle}>
         <div className='contact-list-item-avatar'>
-          <div className='contact-list-item-avatar__text' style={avatarTextStyle}>
+          <div className='contact-list-item-avatar__text'>
             {contactData.avatar.text}
           </div>
         </div>

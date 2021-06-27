@@ -42,7 +42,7 @@ const AppComponent = (props) => {
     <div className="contacts-listing-page">
       <ConfigContext.Provider value={configValue} >
         <TitleComponent titleText={currentListingData.screenTitleText} />
-        <SearchComponent data={currentListingData.searchComponent}/>
+        {/* <SearchComponent data={currentListingData.searchComponent}/> */}
         <div className="sorting-container">
           <SortByComponent sortByData={currentListingData.sortByComponent} fetchData={fetchData}/>
           <SortOrderComponent sortOrderData={currentListingData.sortOrderComponent} fetchData={fetchData}/>
