@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SortByOptionComponent = ({sortByOptionData, key, fetchData}) => {
+const SortByOptionComponent = ({sortByOptionData, fetchData}) => {
   const onClickHandler = (val) => {
     console.log(sortByOptionData.selectActionUrl);
     fetchData(sortByOptionData.selectActionUrl);

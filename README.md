@@ -1,11 +1,12 @@
-## contacts-mobile-web web
-Simple site which creates some basic games for toddlers to test knowledge of colour
+# contacts-mobile-web
+This web application is a POC for creating a thin client, component based front end which is data driven by API. The API which is required to work with this application is the  [ContactsMobileBff](https://github.com/jameschristou/ContactsMobileBff).
 
-## Working Site
-See current deployment [here](https://contacts-mobile-web-web.s3-ap-southeast-2.amazonaws.com/index.html)
 
 ## Build & Development
 Run `npm install` to install all packages and depenedencies.
+
+### Runnning ContactsMobileBff
+Follow the [readme for ContactsMobileBff](https://github.com/jameschristou/ContactsMobileBff). You will need to make sure this API is running in order for `contacts-mobile-web` to work.
 
 ### Dev
 To compile front end assets while developing use `npm run start`.

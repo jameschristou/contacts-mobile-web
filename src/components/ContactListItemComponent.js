@@ -15,8 +15,8 @@ const ContactListItemComponent = ({contactData}) => {
         </div>
       </div>
       <div className='contact-list-item-info'>
-        <div className='contact-list-item__name'>{contactData.name}</div>
-        <div className='contact-list-item__primary-contact-name'>{contactData.primaryContactName}</div>
+        <div className='contact-list-item__primary-display-text'>{contactData.primaryDisplayText}</div>
+        <div className='contact-list-item__primary-secondary-display-text'>{contactData.secondaryDisplayText}</div>
       </div>
     </li>
   );

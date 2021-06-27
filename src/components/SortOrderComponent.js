@@ -1,18 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 
 const SortOrderComponent = ({sortOrderData, fetchData}) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   const onClickHandler = (val) => {
-    setIsExpanded(!isExpanded);
+    console.log(sortOrderData.selectActionUrl);
+    fetchData(sortOrderData.selectActionUrl);
   };
 
   return (
     <div className='sort-order-component'>
       <input className='sort-order-component__input'
           type="submit"
-          value={"A-Z"}
+          value={sortOrderData.displayText}
           onClick={onClickHandler}
         />
     </div>
