@@ -7,7 +7,7 @@ const SortByOptionComponent = ({sortByOptionData, fetchData}) => {
   };
 
   return (
-    <li className='sort-by-component-options-list-item' onClick={onClickHandler}>{sortByOptionData.displayText}</li>
+    <li className={`sort-by-component-options-list-item${sortByOptionData.isCurrentlySelected ? " sort-by-component-options-list-item--selected" : ""}`} onClick={onClickHandler}>{sortByOptionData.displayText}</li>
   );
 };
 
