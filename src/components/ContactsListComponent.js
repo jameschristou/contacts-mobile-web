@@ -1,11 +1,11 @@
 import React from 'react';
 import ContactListItemComponent from './ContactListItemComponent';
 
-const ContactListComponent = ({contactList}) => {
+const ContactsListComponent = ({contactsListData}) => {
   return (
     <div className='contact-list-container'>
       <ul className='contact-list'>
-        {contactList.map((value, index) => {
+        {contactsListData.contactsListItems.map((value, index) => {
             return <ContactListItemComponent contactData={value} key={index} />
         })}
       </ul>
@@ -13,4 +13,4 @@ const ContactListComponent = ({contactList}) => {
   );
 };
 
-export default ContactListComponent;
+export default ContactsListComponent;

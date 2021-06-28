@@ -4,7 +4,7 @@ import TitleComponent from './TitleComponent';
 import SearchComponent from './SearchComponent';
 import SortByComponent from './SortByComponent';
 import SortOrderComponent from './SortOrderComponent';
-import ContactListComponent from './ContactListComponent';
+import ContactsListComponent from './ContactsListComponent';
 
 export const ConfigContext = React.createContext();
 
@@ -47,7 +47,7 @@ const AppComponent = (props) => {
           <SortByComponent sortByData={currentListingData.sortByComponent} fetchData={fetchData}/>
           <SortOrderComponent sortOrderData={currentListingData.sortOrderComponent} fetchData={fetchData}/>
         </div>
-        <ContactListComponent contactList={currentListingData.contacts}/>
+        <ContactsListComponent contactsListData={currentListingData.contactsListComponent}/>
       </ConfigContext.Provider>
     </div>
   );
