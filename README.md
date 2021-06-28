@@ -3,7 +3,10 @@ This web application is a POC for creating a thin client, component based front 
 
 ## Benefits
 ### Less Logic in Clients
-Using this approach means less logic needs to be built into the client experience. This is especially a benefit when working with native applications. If you have both an iOS app and an Android app then any logic built into the client needs to be built twice. If you also have other experiences such as mobile web then that's a 3rd implementation you need to worry about. Logic bugs can be fixed from the API and will immediately take affect for all clients without requiring the lengthy process of updating apps, submitting to the app store and waiting for users to download the updates.
+Using this approach means less logic needs to be built into the client experience. This is especially a benefit when working with native applications. If you have both an iOS app and an Android app then any logic built into the client needs to be built twice. If you also have other experiences such as mobile web then that's a 3rd implementation you need to worry about.
+
+### API Bugs Can Be Fixed Faster
+Bugs that appear in the API can be resolved quickly and once the fix is deployed, will immediately take affect for all clients without requiring the lengthy process of updating apps on the app store and then waiting for users to install the updates. The mean number of hours of user impact for client bugs is much higher than API bugs.
 
 ### More Alignment Across Client Experiences
 This approach simplifies development for the clients and also creates more alignment between different client experiences since all client experiences need to implement the same components.
@@ -16,7 +19,7 @@ The API can return personalised responses and even localised responses without h
 
 ## Drawbacks
 ### Larger Blast Radius With API Bugs
-If there is a bug with the API then it affects all clients. However, compare this against having the same bug in the client. An API bug can be resolved within a short period of time and deployed so that it fixes the issue for all clients. A client bug means submitting a new version of your app to the app store and then waiting as maybe 95% of your users install the latest version.
+If there is a bug with the API then it affects all clients. However, as mentioned before, the mean number of hours of user impact for client bugs is much higher than API bugs because API bugs can be resolved faster for all users.
 
 ### More Chatty Applications
 Using this approach will probably mean more requests to the API. But in this age of high bandwidth, even for mobile devices, this in itself is not a significant problem.
