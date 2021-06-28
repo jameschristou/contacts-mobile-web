@@ -12,7 +12,7 @@ const SortByComponent = ({sortByData, fetchData}) => {
     <div className='sort-by-component'>
       <input className='sort-by-component__input'
           type="submit"
-          value={"Sort"}
+          value={sortByData.displayText}
           onClick={onClickHandler}
         />
       <div className={`sort-by-component-options${isExpanded ? "" : " hidden"}`}>
