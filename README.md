@@ -1,6 +1,5 @@
 # contacts-mobile-web
-This web application is a POC for creating a thin client, component based front end which is data driven by API. The API which is required to work with this application is the  [ContactsMobileBff](https://github.com/jameschristou/ContactsMobileBff).
-
+This web application is a POC for creating a thin client, component based front end that is data driven by API. The API required to work with this application is the  [ContactsMobileBff](https://github.com/jameschristou/ContactsMobileBff).
 
 ## Build & Development
 Run `npm install` to install all packages and depenedencies.
