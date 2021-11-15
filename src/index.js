@@ -1,6 +1,6 @@
 import './sass/style.scss';
 
-import AppComponent from './components/App';
+import AppComponent from './components/listing/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
