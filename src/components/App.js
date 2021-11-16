@@ -8,7 +8,7 @@ function AppComponent() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ListingApp/>} />
-          <Route path="/details" element={<DetailsApp/>} />
+          <Route path="/details/" element={<DetailsApp/>} />
         </Routes>
       </BrowserRouter>
   );
